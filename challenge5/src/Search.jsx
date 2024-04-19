@@ -31,6 +31,14 @@ export default function SearchMovie() {
     }
   };
 
+  useEffect(() => {
+    console.log("localStorage ", localStorage.getItem("token"));
+    if (localStorage.getItem("token") === null) {
+      alert("silahkan login dulu");
+      navigate("/login");
+    }
+  }, []);
+
   const submit = (e) => {
     e.preventDefault();
     searchMovies();
