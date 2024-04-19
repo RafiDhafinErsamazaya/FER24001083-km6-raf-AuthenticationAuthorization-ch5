@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
@@ -36,6 +36,14 @@ export default function Register() {
       alert("Registration failed. Please try again.");
     }
   };
+
+  useEffect(() => {
+    console.log("localStorage ", localStorage.getItem("token"));
+    if (localStorage.getItem("token") !== null) {
+      alert("Token masih aktif");
+      navigate("/");
+    }
+  }, []);
 
   return (
     <div className="flex justify-center items-center h-screen">
