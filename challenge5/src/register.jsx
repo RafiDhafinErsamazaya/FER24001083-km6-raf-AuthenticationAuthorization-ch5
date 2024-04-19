@@ -33,7 +33,7 @@ export default function Register() {
       }
     } catch (error) {
       console.error("Registration error:", error);
-      alert("Registration failed. Please try again.");
+      alert("Password lemah");
     }
   };
 
