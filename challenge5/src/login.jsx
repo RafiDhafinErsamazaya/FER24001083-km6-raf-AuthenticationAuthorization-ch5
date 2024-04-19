@@ -11,7 +11,7 @@ export default function Login() {
   useEffect(() => {
     console.log("localStorage ", localStorage.getItem("token"));
     if (localStorage.getItem("token") !== null) {
-      alert("Token masih aktif");
+      alert("Kamu sudah login");
       navigate("/");
     }
   }, []);
@@ -55,7 +55,7 @@ export default function Login() {
           onChange={(event) => setEmail(event.target.value)}
         />
         <input
-          className="w-full border border-black rounded-md py-2 px-3 mb-14"
+          className="w-full border border-black rounded-md py-2 px-3 mb-8"
           type="password"
           placeholder="Password"
           value={password}

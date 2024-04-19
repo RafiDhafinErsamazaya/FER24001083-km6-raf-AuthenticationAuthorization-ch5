@@ -40,7 +40,7 @@ export default function Register() {
   useEffect(() => {
     console.log("localStorage ", localStorage.getItem("token"));
     if (localStorage.getItem("token") !== null) {
-      alert("Token masih aktif");
+      alert("token kamu masih aktif, harap logout terlebih dahulu ");
       navigate("/");
     }
   }, []);
